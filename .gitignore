@@ -1,0 +1,6 @@
+.vscode
+
+package-lock.json
+
+src/public/css/
+node_modules
