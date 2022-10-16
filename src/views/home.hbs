@@ -1,0 +1,26 @@
+<style>
+  .card-body{ display: flex; flex-direction: column; justify-content: space-between; }
+</style>
+
+<div class="mt-4">
+  <div class="row">
+    {{#each courses}}
+      <div class="col-sm-6 col-lg-4 mb-3">
+        <div class="card">
+          <a href="/courses/{{this.slug}}">
+            <img src="{{this.image}}" alt="{{this.name}}" class="card-img-top" />
+          </a>
+          <div class="card-body" style="min-height: 325px;height:100%">
+            <div class="card-content">
+              <h4 class="card-title">
+                {{this.name}}
+              </h4>
+              <p class="card-text">{{this.description}}</p>
+            </div>
+            <a href="/courses/{{this.slug}}" class="btn btn-primary bottom">Truy cập</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
